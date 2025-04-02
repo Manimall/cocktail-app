@@ -1,0 +1,48 @@
+@use '../../styles/variables' as v;
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: v.$container-width-sm;
+  margin: 0 auto;
+  border-radius: 8px;
+
+  &.error {
+    color: v.$color-error;
+    background: rgba(v.$color-error, 0.1);
+  }
+
+  &.warning {
+    color: v.$color-warning;
+    background: rgba(v.$color-warning, 0.1);
+  }
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.message {
+  color: v.$color-text-secondary;
+  line-height: 1.6;
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .container {
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}

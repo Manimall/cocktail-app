@@ -1,0 +1,26 @@
+@use '../../styles/variables' as v;
+
+.footer {
+  background: linear-gradient(135deg, v.$color-primary-dark, v.$color-bg-dark);
+  color: rgba(v.$color-white, 0.8);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(v.$color-white, 0.1);
+  margin-top: auto;
+  transition: color 0.3s v.$transition-easing;
+
+  &:hover {
+    color: v.$color-white;
+  }
+}
+
+.content {
+  max-width: v.$container-width;
+  margin: 0 auto;
+  padding: 0 v.$spacing-unit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

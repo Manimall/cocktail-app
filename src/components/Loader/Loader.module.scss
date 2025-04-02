@@ -1,0 +1,63 @@
+@use '../../styles/variables' as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+.loader {
+  border: 5px solid v.$color-loader-bg;
+  border-top: 5px solid v.$color-loader-accent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+
+  &.sm {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+
+  &.md {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.lg {
+    width: 70px;
+    height: 70px;
+    border-width: 6px;
+  }
+}
+
+.message {
+  color: v.$color-text-secondary;
+  font-size: 1.1rem;
+}
+
+@media (max-width: v.$breakpoint-tablet) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .loader.md {
+    width: 40px;
+    height: 40px;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

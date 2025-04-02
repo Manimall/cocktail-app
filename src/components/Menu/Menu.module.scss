@@ -1,0 +1,68 @@
+@use '../../styles/variables' as v;
+
+.menu {
+  background: v.$color-primary-dark;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: v.$z-index-menu;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  margin: 0;
+}
+
+.link {
+  color: v.$color-text-light;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s v.$transition-easing;
+  text-transform: capitalize;
+  display: block;
+
+  &:hover {
+    background: rgba(v.$color-white, 0.1);
+  }
+
+  &.active {
+    background: v.$color-primary;
+    color: v.$color-white;
+  }
+}
+
+@media (max-width: v.$breakpoint-tablet) {
+  .list {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .menu {
+    padding: 0.5rem 0;
+  }
+
+  .list {
+    gap: 0.3rem;
+  }
+
+  .link {
+    font-size: 0.8rem;
+  }
+}

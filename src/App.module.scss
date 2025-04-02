@@ -1,0 +1,32 @@
+@use './styles/variables' as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  max-width: v.$container-width;
+  min-width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: v.$color-bg-light;
+}
+
+.content {
+  flex: 1 0 100%;
+  width: 100%;
+  display: flex;
+  padding: calc(v.$spacing-unit * 2) 0;
+  position: relative;
+}
+
+@media (max-width: v.$breakpoint-tablet) {
+  .container {
+    padding: 0 calc(v.$spacing-unit / 2);
+  }
+
+  .content {
+    padding: calc(v.$spacing-unit * 1.5) 0;
+  }
+}

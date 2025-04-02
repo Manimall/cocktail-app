@@ -1,0 +1,48 @@
+@use '../../styles/variables' as v;
+
+.page {
+  h2 {
+    color: v.$color-primary-dark;
+    margin-bottom: calc(v.$spacing-unit * 2);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: calc(v.$spacing-unit * 2);
+  padding: 0 v.$spacing-unit;
+
+  @media (max-width: v.$breakpoint-tablet) {
+    gap: calc(v.$spacing-unit * 1.5);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: calc(v.$spacing-unit * 1.5);
+    }
+  }
+
+  @media (max-width: v.$breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    gap: v.$spacing-unit;
+    padding: 0;
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: v.$spacing-unit;
+    }
+  }
+}
+
+.loaderWrapper {
+  width: 100%;
+  min-width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}

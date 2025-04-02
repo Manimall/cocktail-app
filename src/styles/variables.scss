@@ -1,0 +1,77 @@
+$color-primary: #3498db;
+$color-primary-dark: #2c3e50;
+$color-secondary: #34495e;
+$color-accent: #f08479;
+$color-error: #e74c3c;
+$color-warning: #f39c12;
+$color-success: #2ecc71;
+
+$color-text: #2c3e50;
+$color-text-light: #ecf0f1;
+$color-text-secondary: #7f8c8d;
+
+$color-bg-light: #ffffff;
+$color-bg-dark: #1a1a1a;
+$color-bg-gray: #f3f3f3;
+$color-border: #dfe3e6;
+$color-white: #ffffff;
+
+$color-loader-bg: #f3f3f3;
+$color-loader-accent: #3498db;
+
+$spacing-unit: 1rem;
+$container-width: 1024px;
+$container-width-sm: 600px;
+
+$z-index-menu: 100;
+$z-index-modal: 1000;
+$z-index-tooltip: 1100;
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+$transition-duration: 0.3s;
+$transition-easing: ease;
+
+// Экспорт переменных для JavaScript
+:export {
+  // Цвета
+  colorPrimary: #{$color-primary};
+  colorPrimaryDark: #{$color-primary-dark};
+  colorSecondary: #{$color-secondary};
+  colorAccent: #{$color-accent};
+  colorError: #{$color-error};
+  colorWarning: #{$color-warning};
+  colorSuccess: #{$color-success};
+
+  colorText: #{$color-text};
+  colorTextLight: #{$color-text-light};
+  colorTextSecondary: #{$color-text-secondary};
+
+  colorBgLight: #{$color-bg-light};
+  colorBgDark: #{$color-bg-dark};
+  colorBgGray: #{$color-bg-gray};
+  colorBorder: #{$color-border};
+  colorWhite: #{$color-white};
+
+  colorLoaderBg: #{$color-loader-bg};
+  colorLoaderAccent: #{$color-loader-accent};
+
+  // Размеры
+  spacingUnit: #{$spacing-unit};
+  containerWidth: #{$container-width};
+  containerWidthSm: #{$container-width-sm};
+
+  // Z-index
+  zIndexMenu: #{$z-index-menu};
+  zIndexModal: #{$z-index-modal};
+  zIndexTooltip: #{$z-index-tooltip};
+
+  // Брейкпоинты
+  breakpointTablet: #{$breakpoint-tablet};
+  breakpointMobile: #{$breakpoint-mobile};
+
+  // Анимации
+  transitionDuration: #{$transition-duration};
+  transitionEasing: #{$transition-easing};
+}
